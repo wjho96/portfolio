@@ -1,0 +1,89 @@
+#aboutMe {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/aboutme.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#aboutMe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: -1;
+}
+
+.intro {
+  width: 80%;
+  max-width: 1000px; /* Adjusted max-width for better readability */
+  height: 80%; /* Adjusted to 80% to fit the content better */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 20px; /* Added padding for spacing */
+}
+
+.aboutMe {
+  width: 100%;
+  max-width: 800px; /* Adjusted max-width for better responsiveness */
+  color: #fff;
+  text-align: center;
+}
+
+.aboutMe h2 {
+  font-size: 24px; /* Adjusted font size */
+  margin-bottom: 30px; /* Added margin for spacing */
+}
+
+.aboutMe p {
+  font-size: 14px; /* Adjusted font size */
+  line-height: 2; /* Adjusted line height for better readability */
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.aboutMe p span {
+  font-size: 22px; /* Adjusted font size */
+  font-weight: 700;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .intro {
+    height: auto; /* Allow content to expand vertically */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .aboutMe {
+    width: 90%; /* Adjusted width for smaller screens */
+    text-align: left; /* Adjusted text alignment for better readability */
+    padding: 20px; /* Added padding for spacing */
+  }
+
+  .aboutMe h2 {
+    font-size: 20px; /* Adjusted font size */
+    margin-bottom: 8px; /* Added margin for spacing */
+  }
+
+  .aboutMe p {
+    font-size: 12px; /* Adjusted font size */
+    line-height: 1.5; /* Adjusted line height for better readability */
+  }
+
+  .aboutMe p span {
+    font-size: 16px; /* Adjusted font size */
+  }
+}

@@ -1,0 +1,126 @@
+.skills-section {
+    padding: 50px 10%;
+    background-image: url(../img/coding3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+}
+
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity to darken/lighten */
+    z-index: -1;
+}
+
+.skills-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.skill-item {
+    flex: 0 1 calc(30% - 10px);
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.skill-icon img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 30px 5%;
+        background-size: cover; /* 배경 이미지 크기 조정 */
+        background-attachment: scroll; /* 배경 고정 해제 */
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    .skill-item {
+        flex-basis: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skill-name {
+        font-size: 14px;
+    }
+
+    .skill-icon img {
+        width: 60px;
+    }
+}
+
+/* 버블 애니메이션 스타일
+.bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 8s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(2);
+        opacity: 0;
+    }
+} */

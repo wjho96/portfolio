@@ -1,0 +1,112 @@
+/* App.css 스타일 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 네비게이션 스타일 */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #3c4046;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.menu li {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: #007bff;
+}
+
+
+/* 반응형 스타일 */
+@media screen and (max-width: 1024px) {
+  .home-inner {
+    width: 90%;
+  }
+  #home .home-inner span {
+    font-size: 20px;
+  }
+  #aboutme .profile-img {
+    width: 150px; /* Adjust size for smaller screens */
+    height: 150px; /* Adjust size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-inner {
+    width: 90%;
+  }
+  .home-inner span {
+    font-size: 30px;
+  }
+  #about {
+    height: auto;
+    padding-top: 100px;
+  }
+  #about .intro {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  #about .intro .profile-img {
+    width: 100%;
+    height: 100%;
+  }
+  #about .intro .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #about .intro .aboutMe {
+    width: 100%;
+    font-size: 12px;
+  }
+  #about .intro .aboutMe h3 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  #about .intro .aboutMe h3 span {
+    font-size: 40px;
+  }
+  #about .intro .aboutMe p {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  #portfolio {
+    width: 100%;
+    height: auto;
+  }
+  #portfolio .portfolio-header .portfolio-menu {
+    gap: 0px;
+  }
+  #portfolio .container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
